@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "c-consumer-action": "./components/consumer-action/consumer-action",
+    "c-publisher-action": "./components/publisher-action/publisher-action"
+  }
+}

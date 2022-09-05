@@ -1,0 +1,6 @@
+<view class="container" bind:tap="handleSelect">
+    <c-badge show="{{showBadge}}" count="{{badgeCount}}">
+        <c-icon wx:if="{{icon}}" color="#333333" name="{{icon}}" size="{{iconSize}}"></c-icon>
+        <view>{{text}}</view>
+    </c-badge>
+</view>

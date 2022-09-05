@@ -1,0 +1,10 @@
+<view class="container">
+    <c-avatar src="{{userInfo.avatar}}"
+              shape="circle"
+              size="60"
+              text="{{userInfo.nickname}}"
+    ></c-avatar>
+    <view bind:tap="handleToChat">
+        <c-button special icon="telephone">联系对方</c-button>
+    </view>
+</view>

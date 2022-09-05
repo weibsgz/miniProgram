@@ -1,0 +1,3 @@
+<view class="container">
+    <c-service-form form="{{formData}}" bind:submit="handleSubmit"></c-service-form>
+</view>

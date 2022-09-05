@@ -1,0 +1,5 @@
+/* pages/service-detail/components/publisher-action/publisher-action.wxss */
+
+.my-i-button-class {
+  color: red !important;
+}

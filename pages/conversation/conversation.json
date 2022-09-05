@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "c-conversation-window": "components/conversation-window/conversation-window"
+  }
+}

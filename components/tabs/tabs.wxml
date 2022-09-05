@@ -1,0 +1,23 @@
+<wxs src="../../common/wxs/touchMove.wxs" module="touch"></wxs>
+
+<view class="container">
+  <view class="tabs">
+    <view class="tabs-item" 
+          wx:for="{{tabs}}" 
+          wx:key="item"
+          data-index="{{index}}"
+          bindtap="handleTabChange">
+      <view class="tab-label {{currentTabIndex === index ? 'active' : ''}}">
+        {{item}}
+      </view>
+      <view wx:if="{{index === currentTabIndex}}" class="divider"></view>
+    </view>
+  </view>
+  <!-- tab和切换内容中间可能有别的内容 ，做个插槽 -->
+  <slot name="extend"></slot>
+ 
+  <!-- 切换内容部分  WXS绑定事件的语法要写在双大括号内-->
+  <view class="tab-panel" bind:touchstart= "{{touch.handleTouchStart}}" bind:touchend="{{touch.handelTouchEnd}}">
+    <slot name="panel"></slot>
+  </view>
+</view>

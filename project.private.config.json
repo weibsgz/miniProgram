@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/service-detail/service-detail",
+          "pathName": "pages/service-detail/service-detail",
+          "query": "service_id=16",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

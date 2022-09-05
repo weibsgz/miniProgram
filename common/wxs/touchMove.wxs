@@ -1,0 +1,36 @@
+var touchStartX;
+
+function handleTouchStart(e) {
+  console.log(e)
+  //记录触摸开始时候X轴的位置
+  touchStartX =  e.changedTouches[0].clientX
+
+
+}
+// ownerInstance 给调用页面传递参数
+function handelTouchEnd(e,ownerInstance) {
+  console.log(e)
+  //用结束的位置 - 开始的位置 计算出是左滑(负数)还是右滑(正数)
+  var touchEndX = e.changedTouches[0].clientX
+  var distance = touchEndX - touchStartX;
+
+  var direction = 0
+  //-1 右滑 0 不动 1 左滑
+  if(distance < 0 && distance < -70) {
+    direction = 1
+  }
+  if(distance > 70) {
+     direction = -1
+  }
+
+  if(direction !== 0) {
+    //触发通知
+    ownerInstance.callMethod('handleTouchMove',{direction:direction})
+  }
+
+}
+
+module.exports = {
+  handleTouchStart:handleTouchStart,
+  handelTouchEnd:handelTouchEnd
+}

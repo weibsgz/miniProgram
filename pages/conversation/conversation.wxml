@@ -1,0 +1,11 @@
+<view class="container">
+    <c-conversation-window wx:if="{{sdkReady}}"
+                           targetUserId="{{targetUserId}}"
+                           service="{{service}}"
+                           bind:sendmessage="handleSendMessage"
+    ></c-conversation-window>
+
+    <c-show-status wx:else top="500" show content="会话加载失败~~~">
+        <c-button shape="semicircle" fontColor="#333333" bind:tap="handleLogin">点击刷新</c-button>
+    </c-show-status>
+</view>
